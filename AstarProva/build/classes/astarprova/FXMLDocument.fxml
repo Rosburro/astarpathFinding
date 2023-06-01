@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane id="AnchorPane" prefHeight="736.0" prefWidth="1032.0" style="-fx-background-color: #c8a2c8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astarprova.FXMLDocumentController">
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <GridPane fx:id="griglia" gridLinesVisible="true" prefHeight="734.0" prefWidth="1018.0" style="-fx-background-color: #c8a2c8;">
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <FlowPane alignment="CENTER" hgap="30.0" prefHeight="78.0" prefWidth="974.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#inizia" prefHeight="60.0" prefWidth="246.0" style="-fx-background-color: #800080; -fx-background-radius: 20;" text="inizia" />
+            <Label fx:id="indice" alignment="TOP_LEFT" prefHeight="67.0" prefWidth="294.0" />
+         </children>
+      </FlowPane>
+   </top>
+   <right>
+      <FlowPane alignment="CENTER" prefHeight="634.0" prefWidth="125.0" vgap="25.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="t1" alignment="CENTER" onAction="#tempo1" prefWidth="100.0" promptText="tempo 1" />
+            <TextField fx:id="t2" alignment="CENTER" onAction="#tempo2" prefWidth="100.0" promptText="tempo 2" />
+            <TextField fx:id="iterazioni" alignment="CENTER" onAction="#iterazioniMax" prefWidth="100.0" promptText="azioni max" />
+            <TextField fx:id="molt" alignment="CENTER" onAction="#moltiplica" prefHeight="31.0" prefWidth="98.0" promptText="molt" />
+            <Label fx:id="numeroNodi" alignment="CENTER" prefHeight="21.0" prefWidth="91.0" text="0" />
+            <Button mnemonicParsing="false" onAction="#cancellaMuri" text="cancella muri" />
+            <Button mnemonicParsing="false" onAction="#pulisciFinestra" prefHeight="31.0" prefWidth="94.0" text="clear" />
+            <TextField fx:id="pathFileImporta" alignment="CENTER" onAction="#prendiDaFile" prefHeight="31.0" prefWidth="110.0" promptText="importa" />
+            <TextField fx:id="pathFileEsporta" alignment="CENTER" layoutX="27.0" layoutY="515.0" onAction="#salvaSuFile" prefHeight="31.0" prefWidth="109.0" promptText="esporta" />
+         </children>
+      </FlowPane>
+   </right>
+</BorderPane>
